@@ -18,15 +18,15 @@ python manage.py runserver
 
 ## Labs Overview
 
-### Lab 1: Implement New Route
+### [Lab 1: Implement New Route](./docs/001-implement-new-route.md)
 
 In this lab, participants will learn how to add a new API route to the Django application. The new route will return a simple "Hello World" JSON response. This lab also includes writing tests for the new route to ensure it behaves as expected.
 
-### Lab 2: Data and Services
+### [Lab 2: Data and Services](./docs/002-data-and-services.md)
 
 This lab focuses on generating sample data for the application. Participants will create an API that lists Microsoft Azure VMs information, fetched from a local JSON file. This lab covers the entire flow from generating the sample data to testing the new API endpoint.
 
-### Lab 3: Create Homepage
+### [Lab 3: Create Homepage](/docs/003-create-homepage.md)
 The details for Lab 3 are not provided in the context. However, based on the naming convention, it's likely focused on creating a homepage for the Django application, possibly involving front-end development aspects and integrating the APIs developed in previous labs.
 
 ### Testing
