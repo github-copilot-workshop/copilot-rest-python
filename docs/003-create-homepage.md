@@ -27,7 +27,7 @@ The page should look like:
 
 
 3. If you have any issue you can use the chat to ask for help or clarification, or look at the final solution in the `solutions` branch:
-  - https://github.com/github-copilot-workshop/copilot-rest-python/tree/solutions
+    - https://github.com/github-copilot-workshop/copilot-rest-python/tree/solutions
 
 
 </details>
