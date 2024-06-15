@@ -34,3 +34,4 @@ def get_vms(request):
         return JsonResponse(data, safe=False, status=status.HTTP_200_OK)
     except FileNotFoundError:
         return JsonResponse({'message': 'File not found'}, status=status.HTTP_404_NOT_FOUND)
+

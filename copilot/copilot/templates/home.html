@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM List</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>VM List</h2>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Size</th>
+                    <th>vCPU</th>
+                    <th>Memory (GB)</th>
+                </tr>
+            </thead>
+            <tbody id="vm-list"></tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $.get("/api/vms/", function(data) {
+                var vmList = $("#vm-list");
+                data.forEach(function(vm, index) {
+                    var rowClass = index % 2 === 0 ? "table-primary" : "table-secondary";
+                    vmList.append(
+                        `<tr class="${rowClass}"><td>${vm.size}</td><td>${vm.vcpu}</td><td>${vm.memory}</td></tr>`
+                    );
+                });
+            });
+        });
+    </script>
+</body>
+</html>
