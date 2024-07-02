@@ -6,6 +6,7 @@
                 "GitHub.copilot"
             ]        
         }
-    }
+    },
+    "postCreateCommand": "bash -i .devcontainer/install-dependencies.sh"
     
 }
